@@ -19,7 +19,7 @@ const imgAlt = {
 /* Looping through images */
 for (image of imgArr) {
     const newImage = document.createElement('img');
-    newImage.setAttribute('src', imgArr[image]);
+    newImage.setAttribute('src', `imgArr/${image}`);
     newImage.setAttribute('alt', imgAlt[image]);
     thumbBar.appendChild(newImage);
     thumbBar.addEventListener('click', () => {
