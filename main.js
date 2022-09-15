@@ -28,9 +28,9 @@ for (image of imgArr) {
     newImage.setAttribute('src', `imgArr/${image}`);
     newImage.setAttribute('alt', imgAlt[image]);
     thumbBar.appendChild(newImage);
-    thumbBar.addEventListener('click', () => {
-        displayedImage.src = target.src;
-        displayedImage.alt = target.alt;
+    thumbBar.addEventListener('click', e => {
+        displayedImage.src = e.target.src;
+        displayedImage.alt = e.target.alt;
     });
 }
 
