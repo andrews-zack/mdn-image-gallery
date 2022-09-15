@@ -1,0 +1,31 @@
+const displayedImage = document.querySelector('displayed-img');
+const thumbBar = document.querySelector('.thumb-bar');
+
+const btn = document.querySelector('button');
+const overlay = document.querySelector('.overlay');
+
+/* Declaring the array of image filenames */
+const imgArr = [pic1.jpg, pic2.jpg, pic3.jpg, pic4.jpg, pic5.jpg];
+
+/* Declaring the alternative text for each image file */
+const imgAlt = {
+    'pic1.jpg' : 'Closeup of a human eye',
+    'pic2.jpg' : 'Closeup of the inside of a seashell',
+    'pic3.jpg' : 'Purple and white flowers',
+    'pic4.jpg' : 'Section of colorized ancient Egyptian wall painting and hieroglyphics',
+    'pic5.jpg' : 'Brown butterfly with white markings sitting on a leaf'
+}
+
+/* Looping through images */
+for (image of imgArr) {
+    const newImage = document.createElement('img');
+    newImage.setAttribute('src', imgArr[image]);
+    newImage.setAttribute('alt', imgAlt[image]);
+    thumbBar.appendChild(newImage);
+    thumbBar.addEventListener('click', () => {
+        displayedImage.src = target.src;
+        displayedImage.alt = target.alt;
+    });
+}
+
+/* Wiring up the Darken/Lighten button */
